@@ -1,0 +1,25 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Pacifico Regular.ttf",
+      "sha1": "baca1fca7fe74b61cb33aa0da48ec1a3a77bcf49"
+    },
+    {
+      "path": "src/assets/fonts/Rubik Medium.ttf",
+      "sha1": "7b93e52dc59bc6eb3b374b860c203cbe726c3c31"
+    },
+    {
+      "path": "src/assets/fonts/Rubik Regular.ttf",
+      "sha1": "9d7091d63f35c9d28518b06566442a02b306980a"
+    },
+    {
+      "path": "src/assets/fonts/Yantramanav Medium.ttf",
+      "sha1": "56f6fe9ee92fc58918ace4ec170981bdd95b11ed"
+    },
+    {
+      "path": "src/assets/fonts/Yantramanav Regular.ttf",
+      "sha1": "87f81be122254f8dc4dbe5fb8ac326bd71b936e1"
+    }
+  ]
+}
