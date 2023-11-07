@@ -1,8 +1,16 @@
-export const fontSize = [4, 8, 12, 16, 20,24,28,32,36,40];
+export const fontSize = {
+  fontSize16: 16,
+
+  fontSize20: 20,
+
+  fontSize24: 24,
+};
+
 export const fontweight = {
   regular: '400',
   medium: '600',
 };
 export const fontFamily = {
-  regular: 'Rubik Regular',
+  headerFont: 'Rubik Regular',
+  regularFont: 'Yantramanav Regular',
 };

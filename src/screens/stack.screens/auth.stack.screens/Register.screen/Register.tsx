@@ -22,30 +22,19 @@ const RegisterScreen = (props: any) => {
   return (
     <View style={styles.container}>
       <RootComponents.Row
-        flex={1}
         flexDirection="column"
         justifyContent="center"
-        alignItems="center"
-        width={deviceWidth}
-        maxHeight={deviceHeight}>
+        alignItems="center">
         <ImageBackground
           source={images.registerScreen}
           style={styles.background}
           resizeMode="cover">
-          <RootComponents.Row
-            flex={1}
-            maxHeight={deviceHeight * 0.65}
-            alignItems="flex-end"
-            backgroundColor="none">
+          <RootComponents.Row alignItems="flex-end">
             <Image source={images.AppLogo} style={styles.appLogo} />
           </RootComponents.Row>
+          <RootComponents.Spacer top={90} />
 
-          <RootComponents.Row
-            flex={1}
-            alignItems="center"
-            maxHeight={deviceHeight * 0.35}
-            width={deviceWidth}
-            backgroundColor="none">
+          <RootComponents.Row alignItems="center">
             <Pressable onPress={handleGoogleSignin}>
               <RootComponents.Button
                 backgroundColor="#EA4335"
@@ -82,6 +71,7 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
+    height: deviceHeight,
   },
   appLogo: {
     width: deviceWidth - 70,

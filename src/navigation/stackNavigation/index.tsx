@@ -10,11 +10,11 @@ const Stack = createNativeStackNavigator();
 export default function StackNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen
+      {/* <Stack.Screen
         name={Routes.PROFILE}
         component={ProfileScreen}
         options={{title: 'tabs', headerShown: false}}
-      />
+      /> */}
       <Stack.Screen
         name={Routes.SPLASHSCREEN}
         component={SplashScreen}
