@@ -5,14 +5,15 @@ import TabNavigator from '../tabNavigation';
 import RegisterScreen from '../../screens/stack.screens/auth.stack.screens/Register.screen/Register';
 import SplashScreen from '../../screens/stack.screens/splash.screens/splash';
 import ProfileScreen from '../../screens/tab.screens/profile.tab.screen/Profile';
+import HomeScreen from '../../screens/tab.screens/home.tab.screens/Home';
 
 const Stack = createNativeStackNavigator();
 export default function StackNavigator() {
   return (
     <Stack.Navigator>
       {/* <Stack.Screen
-        name={Routes.PROFILE}
-        component={ProfileScreen}
+        name={Routes.HOME}
+        component={HomeScreen}
         options={{title: 'tabs', headerShown: false}}
       /> */}
       <Stack.Screen

@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import useViewModal from './registerViewModal';
 import {images} from '../../../../assets/images';
-import {RootComponents} from '../../../../components';
+import {RootComponents} from '../../../../components/layput.components';
 import {
   deviceHeight,
   deviceWidth,

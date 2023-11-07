@@ -1,6 +1,7 @@
 export const images = {
   registerScreen: require('./background.images/registerScreenBg.png'),
   AppLogo: require('./logo.images/Applogo.png'),
+  AppLogoicon: require('./logo.images/AppLogoicon.png'),
   googleIcon: require('./icons.images/googleicon.png'),
   avatar: require('./icons.images/avatar.png'),
   contactSupport: require('./icons.images/contactSupport.png'),

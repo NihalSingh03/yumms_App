@@ -4,4 +4,5 @@ export const colors = {
   headerLightGreen: '#43615A',
   white: '#ffffff',
   yelloOrange: '#EA9611',
+  borderColor:"#43615A"
 };

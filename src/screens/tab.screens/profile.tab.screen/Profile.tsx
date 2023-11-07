@@ -12,7 +12,7 @@ import {
   Spacer,
   deviceHeight,
   deviceWidth,
-} from '../../../components';
+} from '../../../components/layput.components';
 import {WidthHeight} from '../../../components/style';
 // create a component
 const ProfileScreen = ({navigation}: any) => {

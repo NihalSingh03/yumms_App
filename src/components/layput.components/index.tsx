@@ -1,6 +1,7 @@
 import {Dimensions, Image, Pressable} from 'react-native';
 
 import styled from 'styled-components/native';
+
 import {
   NormalTextProps,
   RowProps,
@@ -10,7 +11,8 @@ import {
   customColumnProps,
   customRowProps,
   rowColumnProps,
-} from '../types/rootComponentTypes.ts';
+} from '../../types/rootComponentTypes.ts/index.js';
+
 export const deviceWidth = Dimensions.get('window').width;
 export const deviceHeight = Dimensions.get('window').height;
 
@@ -88,7 +90,7 @@ export const Container = styled.View<RowProps>`
   margin: ${({margin = 0}) => margin}px;
   padding: ${({padding = 0}) => padding}px;
   border-radius: ${({borderRadius = 0}) => borderRadius}px;
-  border: ${({borderWidth = 1}) => borderWidth}px
+  border: ${({borderWidth = 0}) => borderWidth}px
     ${({borderStyle = 'solid'}) => borderStyle}
     ${({borderColor = '#D1D5DB'}) => borderColor};
 `;
@@ -128,12 +130,12 @@ export const Container = styled.View<RowProps>`
 //   opacity: ${({opacity = 1}) => opacity};
 // `;
 
-// const NormalText = styled.Text<NormalTextProps>`
-//   color: ${props => props.theme.colors.primary};
-//   font-weight: ${props => props.theme.fontweight.medium};
-//   font-size: ${props =>
-//     props.fontSize ? props.fontSize : props.theme.fontSize[9]}px;
-// `;
+const NormalText = styled.Text<NormalTextProps>`
+  color: ${props => props.theme.colors.primary};
+  font-weight: ${props => props.theme.fontweight.medium};
+  font-size: ${props =>
+    props.fontSize ? props.fontSize : props.theme.fontSize[9]}px;
+`;
 
 export const CustomText = styled.Text<StyledTextProps>`
   font-weight: ${({fontWeight = 400}) => fontWeight};
