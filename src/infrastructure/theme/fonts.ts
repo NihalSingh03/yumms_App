@@ -1,4 +1,6 @@
 export const fontSize = {
+  fontSize14: 14,
+
   fontSize16: 16,
 
   fontSize20: 20,

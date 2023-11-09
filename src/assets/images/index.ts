@@ -6,11 +6,18 @@ export const images = {
   avatar: require('./icons.images/avatar.png'),
   contactSupport: require('./icons.images/contactSupport.png'),
   arrow: require('./icons.images/arrow.png'),
+  arrowWhite: require('./icons.images/arrowWhite.png'),
   delete: require('./icons.images/delete.png'),
   lock: require('./icons.images/lock.png'),
   tc: require('./icons.images/T&C.png'),
   backArrow: require('./icons.images/backArrow.png'),
   searchIcon: require('./icons.images/searchIcon.png'),
   heartIcon: require('./icons.images/heartIcon.png'),
+  EmptyHeartIcon: require('./icons.images/heartEmpty.png'),
   filterIcon: require('./icons.images/filter.png'),
+  shareIcon: require('./icons.images/shareIcon.png'),
+  clockIcon: require('./icons.images/clock.png'),
+  bucketIcon: require('./icons.images/bucket.png'),
+  energyIcon: require('./icons.images/energyIcon.png'),
+
 };

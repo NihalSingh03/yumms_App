@@ -1,7 +1,7 @@
 import {Dimensions} from 'react-native';
 
-export const deviceWidth = Dimensions.get('window').width;
-export const deviceHeight = Dimensions.get('window').height;
+export const {width: deviceWidth, height: deviceHeight} =
+  Dimensions.get('window');
 
 export const margin = {
   mg2: 2,
