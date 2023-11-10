@@ -5,3 +5,7 @@ export type HomeScreenModalProps = {
   setModalVisible: (argument: boolean) => void;
   selectedMeal?: Meal;
 };
+export type IngredientsProps = {
+selectedMeal?:Meal
+ingredients?: (string)[]
+};

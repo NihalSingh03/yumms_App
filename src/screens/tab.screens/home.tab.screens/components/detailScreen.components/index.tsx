@@ -5,13 +5,16 @@ import {
   Image,
   Pressable,
   ImageBackground,
+  ScrollView,
 } from 'react-native';
 import React from 'react';
 import {HomeScreenModalProps} from '../../../../../types/homeScreen.types';
 import {
+  Column,
   Container,
   CustomText,
   Row,
+  Spacer,
   deviceHeight,
   deviceWidth,
 } from '../../../../../components/layput.components';
@@ -19,6 +22,7 @@ import useViewModal from './useViewModal';
 import {theme} from '../../../../../infrastructure/theme';
 import {images} from '../../../../../assets/images';
 import {WidthHeight} from '../../../../../components/style';
+import DetailsTopTabNavigator from '../topTabNavigator.components';
 
 const DetailScreenModal = (props: HomeScreenModalProps) => {
   const {modalVisible, setModalVisible, selectedMeal} = useViewModal(props);
@@ -28,12 +32,15 @@ const DetailScreenModal = (props: HomeScreenModalProps) => {
       <View style={{flex: 1}}>
         {/* Top image container */}
 
-        <Container height={deviceHeight * 0.4} width={deviceWidth}>
+        <Container
+          height="auto"
+          width={deviceWidth}
+          backgroundColor={theme.colors.backgroundMain}>
           <ImageBackground
             source={{uri: selectedMeal?.imageUrl}}
             style={{
               width: deviceWidth,
-              height: deviceHeight * 0.4,
+              height: deviceHeight * 0.3,
               alignItems: 'center',
             }}>
             <Row>
@@ -84,66 +91,81 @@ const DetailScreenModal = (props: HomeScreenModalProps) => {
             </Row>
           </ImageBackground>
         </Container>
+
         {/* Botton Container */}
         <Container
-          backgroundColor={theme.colors.backgroundMain}
-          height={deviceHeight * 0.6}
+        backgroundColor={theme.colors.backgroundMain}
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="flex-start"
+          height="auto"
           width={deviceWidth}>
-          <Row>
-            <Container
-              width={deviceWidth - 90}
-              height={60}
-              borderRadius={4}
-              margin={10}
-              backgroundColor={theme.colors.white}>
+          <Column>
+            <Row>
               <Container
-                width={100}
+                width={deviceWidth - 90}
                 height={60}
-                padding={6}
-                backgroundColor="none"
-                alignItems="center"
-                justifyContent="space-between">
-                <Image source={images.clockIcon} style={WidthHeight(16, 16)} />
-                <CustomText
-                  fontSize={theme.fontSize.fontSize14}
-                  color={
-                    theme.colors.headerDarkGreen
-                  }>{`${selectedMeal?.duration} mins`}</CustomText>
-              </Container>
+                borderRadius={4}
+                margin={10}
+                backgroundColor={theme.colors.white}>
+                <Container
+                  width={100}
+                  height={60}
+                  padding={6}
+                  backgroundColor="none"
+                  alignItems="center"
+                  justifyContent="space-between">
+                  <Image
+                    source={images.clockIcon}
+                    style={WidthHeight(16, 16)}
+                  />
+                  <CustomText
+                    fontSize={theme.fontSize.fontSize14}
+                    color={
+                      theme.colors.headerDarkGreen
+                    }>{`${selectedMeal?.duration} mins`}</CustomText>
+                </Container>
 
-              <Container
-                width={100}
-                height={60}
-                padding={6}
-                backgroundColor="none"
-                alignItems="center"
-                justifyContent="space-between">
-                <Image source={images.bucketIcon} style={WidthHeight(16, 16)} />
-                <CustomText
-                  fontSize={theme.fontSize.fontSize14}
-                  color={
-                    theme.colors.headerDarkGreen
-                  }>{`4 Persons`}</CustomText>
-              </Container>
+                <Container
+                  width={100}
+                  height={60}
+                  padding={6}
+                  backgroundColor="none"
+                  alignItems="center"
+                  justifyContent="space-between">
+                  <Image
+                    source={images.bucketIcon}
+                    style={WidthHeight(16, 16)}
+                  />
+                  <CustomText
+                    fontSize={theme.fontSize.fontSize14}
+                    color={
+                      theme.colors.headerDarkGreen
+                    }>{`4 Persons`}</CustomText>
+                </Container>
 
-              <Container
-                width={100}
-                height={60}
-                padding={10}
-                backgroundColor="none"
-                alignItems="center"
-                justifyContent="space-between">
-                <Image source={images.energyIcon} style={WidthHeight(16, 16)} />
-                <CustomText
-                  fontSize={theme.fontSize.fontSize14}
-                  color={
-                    theme.colors.headerDarkGreen
-                  }>{`1.5Kcal `}</CustomText>
+                <Container
+                  width={100}
+                  height={60}
+                  padding={10}
+                  backgroundColor="none"
+                  alignItems="center"
+                  justifyContent="space-between">
+                  <Image
+                    source={images.energyIcon}
+                    style={WidthHeight(16, 16)}
+                  />
+                  <CustomText
+                    fontSize={theme.fontSize.fontSize14}
+                    color={
+                      theme.colors.headerDarkGreen
+                    }>{`1.5Kcal `}</CustomText>
+                </Container>
               </Container>
-
-            </Container>
-          </Row>
+            </Row>
+          </Column>
         </Container>
+        {selectedMeal && <DetailsTopTabNavigator selectedMeal={selectedMeal} />}
       </View>
     </Modal>
   );

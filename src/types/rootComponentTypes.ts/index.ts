@@ -11,7 +11,7 @@ export type rowColumnProps = {
 export interface RowProps {
   width?: number;
   minWidth?: number;
-  height?: number;
+  height?: number | string;
   backgroundColor?: string;
   borderRadius?: number;
   margin?: number;

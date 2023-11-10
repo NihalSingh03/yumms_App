@@ -19,5 +19,5 @@ export const images = {
   clockIcon: require('./icons.images/clock.png'),
   bucketIcon: require('./icons.images/bucket.png'),
   energyIcon: require('./icons.images/energyIcon.png'),
-
+  circleIcon: require('./icons.images/circle.png'),
 };

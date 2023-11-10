@@ -85,7 +85,17 @@ export const Container = styled.View<RowProps>`
   align-items: ${({alignItems = 'stretch'}) => alignItems};
   flex-wrap: ${({flexWrap = 'no-wrap'}) => flexWrap};
   width: ${({width = 200}) => width}px;
-  height: ${({height = 150}) => height}px;
+  height:${props => {
+    if (props.height === 'auto') {
+      return `${props.height};`;
+    }
+    if (props.height == undefined) {
+      return ` 200px;`;
+    }
+    return `${props.height}px;`;
+  }}
+
+
   background-color: ${({backgroundColor = '#293241'}) => backgroundColor};
   margin: ${({margin = 0}) => margin}px;
   padding: ${({padding = 0}) => padding}px;
