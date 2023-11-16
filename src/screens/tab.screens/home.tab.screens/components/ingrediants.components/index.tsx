@@ -1,7 +1,6 @@
 import {ScrollView, StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import useViewModal from './useViewModal';
-import Meal from '../../../../../db/models/meal';
 import {IngredientsProps} from '../../../../../types/homeScreen.types';
 import {
   Column,

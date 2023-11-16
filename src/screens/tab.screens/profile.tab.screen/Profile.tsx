@@ -14,6 +14,7 @@ import {
   deviceWidth,
 } from '../../../components/layput.components';
 import {WidthHeight} from '../../../components/style';
+import {theme} from '../../../infrastructure/theme';
 // create a component
 const ProfileScreen = ({navigation}: any) => {
   const {handleLogout, handlePickPhoto, profileImage} =
@@ -23,7 +24,11 @@ const ProfileScreen = ({navigation}: any) => {
     <View style={styles.container}>
       <Column
         alignItems="center"
-        style={{width: deviceWidth - 32, flex: 1, backgroundColor: '#fff'}}>
+        style={{
+          width: deviceWidth - 32,
+          flex: 1,
+          backgroundColor: theme.colors.backgroundMain,
+        }}>
         <Spacer top={30} />
         <RootComponents.CustomText fontSize={32} color="#43615A">
           Profile
@@ -36,6 +41,8 @@ const ProfileScreen = ({navigation}: any) => {
           />
         </Row>
         <Spacer top={60} />
+        {/* contact Support */}
+
         <Column alignItems="center" justifyContent="center">
           <Container
             justifyContent="space-between"
@@ -44,7 +51,7 @@ const ProfileScreen = ({navigation}: any) => {
             height={56}
             padding={12}
             margin={10}
-            backgroundColor="#F3F6F8"
+            backgroundColor={theme.colors.white}
             borderRadius={6}>
             <Row alignItems="center">
               <Image
@@ -58,6 +65,7 @@ const ProfileScreen = ({navigation}: any) => {
               <Image source={images.arrow} style={WidthHeight(18, 28)} />
             </Row>
           </Container>
+          {/* Terms and Conditions */}
           <Container
             justifyContent="space-between"
             alignItems="center"
@@ -65,7 +73,7 @@ const ProfileScreen = ({navigation}: any) => {
             height={56}
             padding={12}
             margin={10}
-            backgroundColor="#F3F6F8"
+            backgroundColor={theme.colors.white}
             borderRadius={6}>
             <Row alignItems="center">
               <Image source={images.tc} style={WidthHeight(24, 30)} />
@@ -76,6 +84,7 @@ const ProfileScreen = ({navigation}: any) => {
               <Image source={images.arrow} style={WidthHeight(18, 28)} />
             </Row>
           </Container>
+          {/* Privacy policy */}
           <Container
             justifyContent="space-between"
             alignItems="center"
@@ -83,7 +92,7 @@ const ProfileScreen = ({navigation}: any) => {
             height={56}
             padding={12}
             margin={10}
-            backgroundColor="#F3F6F8"
+            backgroundColor={theme.colors.white}
             borderRadius={6}>
             <Row alignItems="center">
               <Image source={images.lock} style={WidthHeight(24, 28)} />
@@ -94,6 +103,7 @@ const ProfileScreen = ({navigation}: any) => {
               <Image source={images.arrow} style={WidthHeight(18, 28)} />
             </Row>
           </Container>
+          {/* delete account */}
           <Container
             justifyContent="space-between"
             alignItems="center"
@@ -101,7 +111,7 @@ const ProfileScreen = ({navigation}: any) => {
             height={56}
             padding={12}
             margin={10}
-            backgroundColor="#F3F6F8"
+            backgroundColor={theme.colors.white}
             borderRadius={6}>
             <Row alignItems="center">
               <Image source={images.delete} style={WidthHeight(22, 26)} />
@@ -119,13 +129,12 @@ const ProfileScreen = ({navigation}: any) => {
   );
 };
 
-// define your styles
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: theme.colors.backgroundMain,
   },
   profileContainer: {
     justifyContent: 'center',
@@ -133,8 +142,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     width: 300,
     height: 300,
-    // marginBottom: 200,
-    // marginTop: 100,
     borderRadius: 150,
   },
   profileImage: {
@@ -144,5 +151,4 @@ const styles = StyleSheet.create({
   },
 });
 
-//make this component available to the app
 export default ProfileScreen;

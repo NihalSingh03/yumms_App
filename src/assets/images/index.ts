@@ -13,6 +13,7 @@ export const images = {
   backArrow: require('./icons.images/backArrow.png'),
   searchIcon: require('./icons.images/searchIcon.png'),
   heartIcon: require('./icons.images/heartIcon.png'),
+  heartFillIcon: require('./icons.images/heartfill.png'),
   EmptyHeartIcon: require('./icons.images/heartEmpty.png'),
   filterIcon: require('./icons.images/filter.png'),
   shareIcon: require('./icons.images/shareIcon.png'),

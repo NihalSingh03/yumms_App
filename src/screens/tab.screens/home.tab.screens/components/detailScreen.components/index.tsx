@@ -25,7 +25,13 @@ import {WidthHeight} from '../../../../../components/style';
 import DetailsTopTabNavigator from '../topTabNavigator.components';
 
 const DetailScreenModal = (props: HomeScreenModalProps) => {
-  const {modalVisible, setModalVisible, selectedMeal} = useViewModal(props);
+  const {
+    modalVisible,
+    setModalVisible,
+    selectedMeal,
+    handleLikeButton,
+    favourite,
+  } = useViewModal(props);
 
   return (
     <Modal animationType="slide" transparent={false} visible={modalVisible}>
@@ -80,9 +86,17 @@ const DetailScreenModal = (props: HomeScreenModalProps) => {
                       style={WidthHeight(24, 24)}
                     />
                   </Pressable>
-                  <Pressable>
+
+                  {/* like Icon */}
+                  <Pressable onPress={() => handleLikeButton(selectedMeal?.id)}>
                     <Image
-                      source={images.EmptyHeartIcon}
+                      source={
+                        favourite.some(
+                          (item: string) => item === selectedMeal?.id,
+                        )
+                          ? images.heartFillIcon
+                          : images.heartIcon
+                      }
                       style={WidthHeight(24, 24)}
                     />
                   </Pressable>
@@ -94,7 +108,7 @@ const DetailScreenModal = (props: HomeScreenModalProps) => {
 
         {/* Botton Container */}
         <Container
-        backgroundColor={theme.colors.backgroundMain}
+          backgroundColor={theme.colors.backgroundMain}
           flexDirection="column"
           alignItems="center"
           justifyContent="flex-start"

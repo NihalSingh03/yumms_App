@@ -60,10 +60,8 @@ const HomeScreen = ({navigation}: any) => {
         <Column
           alignItems="center"
           style={{
-            height:180,
+            height: 180,
             width: screenwidth,
-
-          
           }}>
           <Row>
             <Container
@@ -136,7 +134,7 @@ const HomeScreen = ({navigation}: any) => {
 
           {/* Categories   */}
 
-          <ScrollView horizontal={true} >
+          <ScrollView horizontal={true}>
             {CATEGORIES.map(category => (
               <Pressable
                 style={{height: 40}}
@@ -173,7 +171,7 @@ const HomeScreen = ({navigation}: any) => {
 
         <Column
           style={{
-            height: actualHeight -180,
+            height: actualHeight - 180,
             width: screenwidth,
             backgroundColor: theme.colors.backgroundMain,
           }}>
@@ -212,13 +210,18 @@ const HomeScreen = ({navigation}: any) => {
                               padding={8}
                               alignItems="center"
                               justifyContent="space-between"
-                              backgroundColor="none">
+                              backgroundColor=" rgba(0, 0, 0, 0.01)">
                               <CustomText
                                 fontFamily={theme.fontFamily.headerFont}
                                 fontSize={theme.fontSize.fontSize20}>
                                 {meal.title}
                               </CustomText>
-                              <CustomText>hello</CustomText>
+                              <Pressable>
+                                <Image
+                                  source={images.heartIcon}
+                                  style={WidthHeight(22, 20)}
+                                />
+                              </Pressable>
                             </Container>
                           </Container>
                         </Row>

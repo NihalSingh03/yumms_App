@@ -3,11 +3,14 @@ import {SafeAreaView, StyleSheet} from 'react-native';
 import Navigator from './src/navigation/Navigator';
 import {ThemeProvider} from 'styled-components/native';
 import {theme} from './src/infrastructure/theme';
+import {FavouritesContext} from './src/context/favourites.context';
 function App(): JSX.Element {
   return (
     <SafeAreaView style={styles.Container}>
       <ThemeProvider theme={theme}>
-        <Navigator />
+        <FavouritesContext>
+          <Navigator />
+        </FavouritesContext>
       </ThemeProvider>
     </SafeAreaView>
   );
