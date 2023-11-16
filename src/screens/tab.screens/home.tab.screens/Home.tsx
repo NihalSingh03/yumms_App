@@ -26,7 +26,7 @@ import {images} from '../../../assets/images';
 import useViewModal from './homeViewModal';
 import {WidthHeight} from '../../../components/style';
 import {styles} from './styles';
-import DetailScreenModal from './components/detailScreen.components';
+import DetailScreenModal from '../../../components/detailPageScreen/detailScreen.components';
 
 //import { HeaderHeightContext } from '@react-navigation/native-stack';
 //import { useHeaderHeight } from '@react-navigation/native-stack';

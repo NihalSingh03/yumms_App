@@ -1,7 +1,8 @@
 import {useContext} from 'react';
-import {HomeScreenModalProps} from '../../../../../types/homeScreen.types';
-import {FavouriteContext} from '../../../../../context/favourites.context';
-import {setDataInAsyncStorage} from '../../../../../utils/asyncStorage.utils';
+import { FavouriteContext } from '../../../context/favourites.context';
+import { HomeScreenModalProps } from '../../../types/homeScreen.types';
+import { setDataInAsyncStorage } from '../../../utils/asyncStorage.utils';
+
 
 export default function useViewModal(props: HomeScreenModalProps) {
   const {modalVisible, setModalVisible, selectedMeal} = props;
