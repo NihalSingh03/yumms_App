@@ -45,6 +45,7 @@ const HomeScreen = ({navigation}: any) => {
     modalVisible,
     setModalVisible,
     selectedMeal,
+    userDetails,
   } = useViewModal();
 
   return (
@@ -72,10 +73,11 @@ const HomeScreen = ({navigation}: any) => {
               padding={10}
               backgroundColor={theme.colors.backgroundMain}>
               <Image
-                source={images.backArrow}
+                source={{uri: userDetails.photoURL}}
                 style={{
                   width: 30,
-                  height: 26,
+                  height: 30,
+                  borderRadius: 15,
                 }}
               />
 
@@ -216,12 +218,12 @@ const HomeScreen = ({navigation}: any) => {
                                 fontSize={theme.fontSize.fontSize20}>
                                 {meal.title}
                               </CustomText>
-                              <Pressable>
+                              {/* <Pressable>
                                 <Image
                                   source={images.heartIcon}
                                   style={WidthHeight(22, 20)}
                                 />
-                              </Pressable>
+                              </Pressable> */}
                             </Container>
                           </Container>
                         </Row>
@@ -240,7 +242,7 @@ const HomeScreen = ({navigation}: any) => {
                       justifyContent="flex-start"
                       width={screenwidth - 16}
                       backgroundColor={theme.colors.white}
-                      borderWidth={2}
+                      borderWidth={1}
                       margin={10}>
                       <Image
                         source={{uri: meal.imageUrl}}

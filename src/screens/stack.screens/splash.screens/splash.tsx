@@ -1,13 +1,20 @@
 //import liraries
 import React, {useEffect} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import {getDataFromAsyncStorage} from '../../../utils/asyncStorage.utils';
 import {CommonActions, useNavigation} from '@react-navigation/core';
 import {Routes} from '../../../navigation/route';
+import {
+  Container,
+  deviceHeight,
+  deviceWidth,
+} from '../../../components/layput.components';
+import {images} from '../../../assets/images';
+import {WidthHeight} from '../../../components/style';
+import {theme} from '../../../infrastructure/theme';
 
 // create a component
 const SplashScreen = ({navigation}: any) => {
-  
   const navigateReset = (screen: string) => {
     navigation.dispatch(
       CommonActions.reset({
@@ -36,7 +43,7 @@ const SplashScreen = ({navigation}: any) => {
 
   return (
     <View style={styles.container}>
-      <Text>SplashScreen</Text>
+      <Image source={images.AppLogo} style={WidthHeight(200, 120)} />
     </View>
   );
 };
@@ -47,7 +54,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#2c3e50',
+    backgroundColor: theme.colors.backgroundMain,
   },
 });
 

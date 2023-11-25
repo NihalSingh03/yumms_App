@@ -21,7 +21,6 @@ export default function useViewModal(props: HomeScreenModalProps) {
       setDataInAsyncStorage('favourites', [...favourite, mealId]);
     }
   };
-  console.log(favourite);
   return {
     modalVisible,
     setModalVisible,

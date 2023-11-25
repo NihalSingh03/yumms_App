@@ -21,4 +21,10 @@ export const images = {
   bucketIcon: require('./icons.images/bucket.png'),
   energyIcon: require('./icons.images/energyIcon.png'),
   circleIcon: require('./icons.images/circle.png'),
+  home: require('./icons.images/home.png'),
+  homeFocused: require('./icons.images/homeFocused.png'),
+  profile: require('./icons.images/profile.png'),
+  profileFocused: require('./icons.images/profileFocused.png'),
+  favouritesFocused: require('./icons.images/favouritesFocused.png'),
+  favourites: require('./icons.images/favourites.png'),
 };
