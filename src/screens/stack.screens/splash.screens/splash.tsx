@@ -4,11 +4,6 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import {getDataFromAsyncStorage} from '../../../utils/asyncStorage.utils';
 import {CommonActions, useNavigation} from '@react-navigation/core';
 import {Routes} from '../../../navigation/route';
-import {
-  Container,
-  deviceHeight,
-  deviceWidth,
-} from '../../../components/layput.components';
 import {images} from '../../../assets/images';
 import {WidthHeight} from '../../../components/style';
 import {theme} from '../../../infrastructure/theme';

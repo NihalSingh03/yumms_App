@@ -8,6 +8,7 @@ import {
   Pressable,
   Image,
   ScrollView,
+  Modal,
 } from 'react-native';
 import useViewModal from './profileViewModal';
 import {images} from '../../../assets/images';
@@ -27,57 +28,100 @@ import {fontweight} from '../../../infrastructure/theme/fonts';
 
 // create a component
 const ProfileScreen = ({navigation}: any) => {
-  const {handleLogout, handlePickPhoto, userDetails} = useViewModal(navigation);
-  const subjects = [
-    {name: 'English', id: 1},
-    {name: 'Hindi', id: 2},
-    {name: 'Math', id: 3},
-    {name: 'Science', id: 4},
-  ];
-  const [selectedSubject, setSelectedSubject] = useState(subjects[0]);
-  type subject = {
-    name: string;
-    id: number;
-  };
+  const {
+    handleLogout,
+    handleOpenGallery,
+    userDetails,
+    profilePickModal,
+    handleTakePicture,
+    handleProfilePhoto,
+    handleCancleProfileUpdate,
+  } = useViewModal(navigation);
 
-  if (0) {
-    return (
-      <View style={{flex: 1, backgroundColor: 'yellow'}}>
-        <ScrollView horizontal={true}>
-          <Container
-            width={deviceWidth}
-            height={50}
-            margin={10}
-            backgroundColor="red">
-            {subjects.map((subject: subject) => {
-              return (
-                <Pressable
-                  onPress={() => {
-                    setSelectedSubject(subject);
-                  }}
-                  key={subject.id}>
-                  <Container
-                    width={80}
-                    height={40}
-                    margin={20}
-                    backgroundColor={
-                      selectedSubject.id === subject.id
-                        ? theme.colors.headerDarkGreen
-                        : 'black'
-                    }
-                    alignItems="center">
-                    <CustomText color="white">{subject.name} </CustomText>
-                  </Container>
-                </Pressable>
-              );
-            })}
-          </Container>
-        </ScrollView>
-      </View>
-    );
-  }
   return (
     <View style={styles.container}>
+      {/* Change profile modal */}
+
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={profilePickModal}>
+        <Container
+          flex={1}
+          flexDirection='column'
+          alignItems="flex-end"
+          width={deviceWidth}
+          height={deviceHeight}
+          backgroundColor={"rgba(14, 89, 86, 0.2)"}>
+          <Pressable onPress={() => handleCancleProfileUpdate()}>
+            <Container
+              flexDirection="column"
+              borderRadius={10}
+              alignItems="center"
+              width={deviceWidth }
+              height={deviceHeight * 0.7}
+              backgroundColor={"none"}></Container>
+          </Pressable>
+          <Container
+            flexDirection="column"
+            borderRadius={10}
+            alignItems="center"
+            margin={20}
+            width={deviceWidth - 32}
+            height={deviceHeight * 0.25}
+            backgroundColor={theme.colors.white}>
+            {/* Take Picture button */}
+            <Pressable onPress={() => handleTakePicture()}>
+              <Container
+                backgroundColor={theme.colors.headerDarkGreen}
+                width={deviceWidth - 64}
+                height={56}
+                borderRadius={6}
+                margin={5}
+                alignItems="center">
+                <CustomText
+                  fontFamily={theme.fontFamily.headerFont}
+                  fontSize={theme.fontSize.fontSize20}>
+                  Take Picture
+                </CustomText>
+              </Container>
+            </Pressable>
+            {/* Choose from gallery button */}
+            <Pressable onPress={() => handleOpenGallery()}>
+              <Container
+                backgroundColor={theme.colors.headerDarkGreen}
+                width={deviceWidth - 64}
+                height={56}
+                borderRadius={6}
+                margin={5}
+                alignItems="center">
+                <CustomText
+                  fontFamily={theme.fontFamily.headerFont}
+                  fontSize={theme.fontSize.fontSize20}>
+                  Open Gallery
+                </CustomText>
+              </Container>
+            </Pressable>
+            {/*  Cancle button */}
+            <Pressable onPress={() => handleCancleProfileUpdate()}>
+              <Container
+                backgroundColor={theme.colors.headerDarkGreen}
+                width={deviceWidth - 64}
+                height={56}
+                borderRadius={6}
+                margin={5}
+                alignItems="center">
+                <CustomText
+                  fontFamily={theme.fontFamily.headerFont}
+                  fontSize={theme.fontSize.fontSize20}>
+                  Cancle
+                </CustomText>
+              </Container>
+            </Pressable>
+          </Container>
+        </Container>
+      </Modal>
+
       <Column
         alignItems="center"
         style={{
@@ -91,10 +135,7 @@ const ProfileScreen = ({navigation}: any) => {
         </RootComponents.CustomText>
         <Spacer top={30} />
         <Row>
-          <Pressable
-            onPress={() => {
-              handlePickPhoto();
-            }}>
+          <Pressable onPress={() => handleProfilePhoto()}>
             <Image
               source={
                 userDetails.photoURL
@@ -222,6 +263,12 @@ const styles = StyleSheet.create({
     width: 300,
     height: 300,
     borderRadius: 150,
+  },
+  profileModalContainer: {
+    height: deviceHeight,
+    width: deviceWidth,
+    alignItems: 'flex-end',
+    backgroundColor: theme.colors.yelloOrange,
   },
   profileImage: {
     width: 300,

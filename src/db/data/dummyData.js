@@ -1,6 +1,8 @@
 import Category from '../models/category';
 import Meal from '../models/meal';
-export const CATEGORIES = [
+
+
+ export const CATEGORIES = [
   new Category(
     'c1',
     'Italian',
@@ -510,3 +512,9 @@ export const MEALS = [
     true,
   ),
 ];
+
+// const categoriesJSON = JSON.stringify(CATEGORIES, null, 2);
+// const mealsJSON = JSON.stringify(MEALS, null, 2);
+
+// console.log('Categories:\n', categoriesJSON);
+// console.log('\nMeals:\n', mealsJSON);
