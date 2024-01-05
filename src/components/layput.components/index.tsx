@@ -93,8 +93,7 @@ export const Container = styled.View<RowProps>`
       return ` 200px;`;
     }
     return `${props.height}px;`;
-  }}
-
+  }} 
 
   background-color: ${({backgroundColor = '#293241'}) => backgroundColor};
   margin: ${({margin = 0}) => margin}px;
@@ -105,40 +104,7 @@ export const Container = styled.View<RowProps>`
     ${({borderColor = '#D1D5DB'}) => borderColor};
 `;
 
-//  max-height: ${({maxHeight = deviceHeight}) => maxHeight}px;
-// const Row1 = styled.View<RowProps>`
-//   flex: ${({flex = 1}) => flex};
-//   flex-direction: ${({flexDirection = 'row'}) => flexDirection};
-//   justify-content: ${({justifyContent = 'center'}) => justifyContent};
-//   align-items: ${({alignItems = 'stretch'}) => alignItems};
-//   min-width: ${({minWidth = 200}) => minWidth}px;
-//   min-height: ${({minHeight = 200}) => minHeight}px;
-//   background-color: ${({backgroundColor = '#293241'}) => backgroundColor};
-//   border-radius: ${({borderRadius = 0}) => borderRadius}px;
-//   margin: ${({margin = 0}) => margin}px;
-//   padding: ${({padding = 0}) => padding}px;
-//   opacity: ${({opacity = 1}) => opacity};
-// `;
-// const customView = styled.View<RowProps>`
-//   flex: 1;
-//   flex-direction: ${({flexDirection = 'row'}) => flexDirection};
-//   background-color: green;
-// `;
 
-// const Column1 = styled.View<customColumnProps>`
-//   flex: ${({flex = 1}) => flex};
-//   flex-direction: ${({flexDirection = 'column'}) => flexDirection};
-//   justify-content: ${({justifyContent = 'center'}) => justifyContent};
-//   align-items: ${({alignItems = 'center'}) => alignItems};
-//   width: ${({width = 200}) => width}px;
-
-//   min-height: ${({minHeight = 200}) => minHeight}px;
-//   background-color: ${({backgroundColor = '#293241'}) => backgroundColor};
-//   border-radius: ${({borderRadius = 0}) => borderRadius}px;
-//   margin: ${({margin = 0}) => margin}px;
-//   padding: ${({padding = 0}) => padding}px;
-//   opacity: ${({opacity = 1}) => opacity};
-// `;
 
 const NormalText = styled.Text<NormalTextProps>`
   color: ${props => props.theme.colors.primary};

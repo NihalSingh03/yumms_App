@@ -1,7 +1,6 @@
 import {ScrollView, StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import useViewModal from './useViewModal';
-import {IngredientsProps} from '../../../../../types/homeScreen.types';
 import {
   Column,
   Container,
@@ -10,10 +9,12 @@ import {
   Spacer,
   deviceHeight,
   deviceWidth,
-} from '../../../../../components/layput.components';
-import {theme} from '../../../../../infrastructure/theme';
-import {images} from '../../../../../assets/images';
-import {WidthHeight} from '../../../../../components/style';
+} from '../../layput.components';
+
+import { IngredientsProps } from '../../../types/homeScreen.types';
+import { theme } from '../../../infrastructure/theme';
+import { images } from '../../../assets/images';
+import { WidthHeight } from '../../style';
 
 const Ingredients = (props: IngredientsProps) => {
   const {} = useViewModal;

@@ -8,7 +8,11 @@ import {
   ScrollView,
 } from 'react-native';
 import React from 'react';
-import {HomeScreenModalProps} from '../../../../../types/homeScreen.types';
+import DetailsTopTabNavigator from '../topTabNavigator.components';
+import {theme} from '../../../infrastructure/theme';
+import {images} from '../../../assets/images';
+import {WidthHeight} from '../../style';
+import {HomeScreenModalProps} from '../../../types/homeScreen.types';
 import {
   Column,
   Container,
@@ -17,12 +21,8 @@ import {
   Spacer,
   deviceHeight,
   deviceWidth,
-} from '../../../../../components/layput.components';
+} from '../../layput.components/index';
 import useViewModal from './useViewModal';
-import {theme} from '../../../../../infrastructure/theme';
-import {images} from '../../../../../assets/images';
-import {WidthHeight} from '../../../../../components/style';
-import DetailsTopTabNavigator from '../topTabNavigator.components';
 
 const DetailScreenModal = (props: HomeScreenModalProps) => {
   const {

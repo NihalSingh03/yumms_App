@@ -17,17 +17,24 @@ import {
   deviceHeight,
   deviceWidth,
 } from '../../../components/layput.components';
-import DetailScreenModal from '../home.tab.screens/components/detailScreen.components';
 import {theme} from '../../../infrastructure/theme';
 import {images} from '../../../assets/images';
 import useViewModal from './favouratesViewModal';
 import {WidthHeight} from '../../../components/style';
 import Meal from '../../../db/models/meal';
+import DetailScreenModal from '../../../components/detailPageScreen/detailScreen.components';
+import { styles } from './styles';
 
 // create a component
 const FavouratesScreen = ({navigation}: any) => {
-  const {favouriteItems, handleDetailPageModal} = useViewModal();
-  if (favouriteItems == null) {
+  const {
+    favouriteItems,
+    handleDetailPageModal,
+    modalVisible,
+    setModalVisible,
+    selectedMeal,
+  } = useViewModal();
+  if (favouriteItems[0] ==undefined ) {
     return (
       <View style={styles.container}>
         <Text>NO Favourite Items.</Text>
@@ -36,8 +43,12 @@ const FavouratesScreen = ({navigation}: any) => {
   } else {
     return (
       <View style={styles.container}>
+        <DetailScreenModal
+          modalVisible={modalVisible}
+          setModalVisible={setModalVisible}
+          selectedMeal={selectedMeal}
+        />
         <Column>
-
           <Column
             style={{
               height: deviceHeight,
@@ -83,18 +94,29 @@ const FavouratesScreen = ({navigation}: any) => {
                                 padding={8}
                                 alignItems="center"
                                 justifyContent="space-between"
-                                backgroundColor=" rgba(0, 0, 0, 0.01)">
+                                backgroundColor=" rgba(0, 0, 0, 0.05)">
                                 <CustomText
                                   fontFamily={theme.fontFamily.headerFont}
                                   fontSize={theme.fontSize.fontSize20}>
                                   {meal.title}
                                 </CustomText>
-                                <Pressable>
+                                <Container
+                                  height={50}
+                                  width={90}
+                                  alignItems="center"
+                                  justifyContent="flex-end"
+                                  backgroundColor="none">
                                   <Image
-                                    source={images.heartIcon}
-                                    style={WidthHeight(22, 20)}
+                                    source={images.clockIcon}
+                                    style={WidthHeight(16, 16)}
                                   />
-                                </Pressable>
+                                  <Spacer left={8} />
+                                  <CustomText
+                                    fontFamily={theme.fontFamily.headerFont}
+                                    color={theme.colors.white}>
+                                    {`${meal.duration} mins`}
+                                  </CustomText>
+                                </Container>
                               </Container>
                             </Container>
                           </Row>
@@ -105,7 +127,7 @@ const FavouratesScreen = ({navigation}: any) => {
                 } else {
                   return (
                     <Pressable
-                      // onPress={() => handleDetailPageModal(meal)}
+                      onPress={() => handleDetailPageModal(meal)}
                       key={index}>
                       <Container
                         borderRadius={10}
@@ -201,15 +223,6 @@ const FavouratesScreen = ({navigation}: any) => {
   }
 };
 
-// define your styles
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#2c3e50',
-  },
-});
+
 
 export default FavouratesScreen;
