@@ -6,12 +6,7 @@ export default {
       ? process.env.APP_URL
       : 'https://staging-api.getwebet.com',
   ENV: process.env.ENVIRONMENT,
-  AWS_CONFIG: {
-    bucketName: 'yummsappbucket',
-    region: 'ap-south-1',
-    accessKeyId: 'AKIARGIZBDET5SSXZBJL',
-    secretAccessKey: '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',
-  },
+
   AWS_BUCKET_NAME: 'yummsappbucket',
   AWS_SOURCE_URL: process.env.AWS_SOURCE_URL,
   AWS_CLOUD_FRONT_URL: 'https://yummsappbucket.s3.ap-south-1.amazonaws.com',
