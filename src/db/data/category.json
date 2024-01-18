@@ -1,0 +1,63 @@
+
+ [
+  {
+    "id": "c1",
+    "title": "Italian",
+    "color": "#f5428d",
+    "img": "https://www.kikkoman.eu/fileadmin/_processed_/d/0/csm_Italien_0525c8ba3c.jpg"
+  },
+  {
+    "id": "c2",
+    "title": "Quick & Easy",
+    "color": "#f54242",
+    "img": "https://assets.site-static.com/userFiles/1621/image/italian-food-in-durango.jpg"
+  },
+  {
+    "id": "c3",
+    "title": "Hamburgers",
+    "color": "#f5a442",
+    "img": "https://www.qantas.com/content/travelinsider/en/explore/australia/queensland/brisbane/the-best-italian-restaurants-in-brisbane/_jcr_content/parsysTop/hero.img.full.medium.jpg/1532404067687.jpg"
+  },
+  {
+    "id": "c4",
+    "title": "German",
+    "color": "#f5d142",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9K45LoMxcmiqlTLeE5t-TwWh54Ow3SVYTdQH-zWVgcx6yvIzutZz65Efa6JlmstsAU&usqp=CAU"
+  },
+  {
+    "id": "c5",
+    "title": "Light & Lovely",
+    "color": "#368dff",
+    "img": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/8/7/1/FN_Italian-Favorites-Opener_s4x3.jpg.rend.hgtvcom.616.462.suffix/1438990067345.jpeg"
+  },
+  {
+    "id": "c6",
+    "title": "Exotic",
+    "color": "#41d95d",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDpU8BJ35-m065bigYBkNGSoz7VK_RcICoyXPciHUPRVYt7CDASixvSbTw-GKHQjpewyo&usqp=CAU"
+  },
+  {
+    "id": "c7",
+    "title": "Breakfast",
+    "color": "#9eecff",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYF5JMsEtWtLcR1KlAdXTsl_ilwIGRCEC_ePQU6NBBqBtLI_ed7AkckK4vGDOaauuMjuQ&usqp=CAU"
+  },
+  {
+    "id": "c8",
+    "title": "Asian",
+    "color": "#b9ffb0",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqfM-6EBlUcazvz5ruukd6Nbr8hKGwVAucZMr7O4-s_Gv3-8ELRZkpsuLp_EYEAaHMGe4&usqp=CAU"
+  },
+  {
+    "id": "c9",
+    "title": "French",
+    "color": "#ffc7ff",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG0kJ5DaqlKg46J5MYE86c08hUKWewZ80GxxMdskdHBoMxTh8Z1donVMSF9Wcp6upYYh0&usqp=CAU"
+  },
+  {
+    "id": "c10",
+    "title": "Summer",
+    "color": "#47fced",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNQYrOfGxKftUEeVmP1hRUTJFznMkF9zopGg&usqp=CAU"
+  }
+]

@@ -1,7 +1,7 @@
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import Ingredients from '../ingrediants.components';
 import Preperation from '../prepration.components';
-import {IngredientsProps} from '../../../../../types/homeScreen.types';
+import { IngredientsProps } from '../../../types/homeScreen.types';
 
 const Tab = createMaterialTopTabNavigator();
 

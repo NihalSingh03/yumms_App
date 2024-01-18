@@ -1,17 +1,19 @@
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import useViewModal from './useViewModal';
-import {IngredientsProps} from '../../../../../types/homeScreen.types';
-import {theme} from '../../../../../infrastructure/theme';
+
 import {
   Container,
   CustomText,
   Row,
   Spacer,
   deviceWidth,
-} from '../../../../../components/layput.components';
-import {WidthHeight} from '../../../../../components/style';
-import {images} from '../../../../../assets/images';
+} from '../../layput.components';
+import { images } from '../../../assets/images';
+import { WidthHeight } from '../../style';
+import { IngredientsProps } from '../../../types/homeScreen.types';
+import { theme } from '../../../infrastructure/theme';
+
 
 const Preperation = (props: IngredientsProps) => {
   const {} = useViewModal;

@@ -1,8 +1,5 @@
-import {createContext, useEffect, useState} from 'react';
-import {
-  getDataFromAsyncStorage,
-
-} from '../../utils/asyncStorage.utils';
+import {createContext, useContext, useEffect, useState} from 'react';
+import {getDataFromAsyncStorage} from '../../utils/asyncStorage.utils';
 
 export const FavouriteContext = createContext<any>({favourite: []});
 
@@ -26,3 +23,4 @@ export const FavouritesContext = (props: any) => {
     </FavouriteContext.Provider>
   );
 };
+

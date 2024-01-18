@@ -2,15 +2,17 @@ import {StatusBar} from 'react-native';
 import {CATEGORIES, MEALS} from '../../../db/data/dummyData';
 import {useBottomTabBarHeight} from '@react-navigation/bottom-tabs';
 import {deviceHeight, deviceWidth} from '../../../components/layput.components';
-import {useEffect, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import Category from '../../../db/models/category';
 import Meal from '../../../db/models/meal';
+import {UserContext} from '../../../context/userData.context';
 
 export default function useViewModal() {
   const [selectedCategory, setSelectedCategory] = useState(CATEGORIES[0]);
   const [selectedCategoryMeals, setSelectedCategoryMeals] = useState<Meal[]>(
     [],
   );
+  const {userDetails} = useContext(UserContext);
 
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedMeal, setSelectedMeal] = useState<Meal | undefined>();
@@ -52,5 +54,6 @@ export default function useViewModal() {
     setModalVisible,
     handleDetailPageModal,
     selectedMeal,
+    userDetails,
   };
 }
